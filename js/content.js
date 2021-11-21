@@ -10,7 +10,6 @@ function showBarang() {
     listBarang.innerHTML += "<li>" + "<p>" + dataBarang[i] + "</p>" + "</li>";
   }
 }
-
 function showShoes() {
   document.querySelector(".img-gambar1").src = "img/product1.jpg";
   document.querySelector(".img-gambar2").src = "img/content/sepatu.png";
