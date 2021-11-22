@@ -1,3 +1,4 @@
+//barang1
 var dataBarang = ["Shoes | Crocodile Skink ", " Rp9.000.000", " Kondisi : baru", " Berat: 1.000 Gram", " Merk: Crocodile Skink"];
 
 function showBarang() {
@@ -10,10 +11,10 @@ function showBarang() {
     listBarang.innerHTML += "<li>" + "<p>" + dataBarang[i] + "</p>" + "</li>";
   }
 }
-function showShoes() {
+function showImg() {
   document.querySelector(".img-gambar1").src = "img/product1.jpg";
   document.querySelector(".img-gambar2").src = "img/content/sepatu.png";
   document.querySelector(".img-gambar3").src = "img/content/sepatu2.jpg";
 }
 showBarang();
-showShoes();
+showImg();
