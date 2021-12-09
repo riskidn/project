@@ -8,8 +8,25 @@ app.use(express.static(__dirname + "/public"));
 
 //view engine
 app.set(`view engine`, `ejs`);
+
+//sett url
 app.get(`/`, (req, res) => {
-  res.render("index");
+  res.render("pages/index");
+});
+app.get(`/index`, (req, res) => {
+  res.render("pages/index");
+});
+app.get(`/contact`, (req, res) => {
+  res.render("pages/contact");
+});
+app.get(`/list`, (req, res) => {
+  res.render("pages/list");
+});
+app.get(`/login`, (req, res) => {
+  res.render("pages/login");
+});
+app.get(`/signup`, (req, res) => {
+  res.render("pages/signup");
 });
 
 //internal server
