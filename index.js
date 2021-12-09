@@ -4,8 +4,12 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname + "/public"));
+
+//view engine
+app.set(`view engine`, `ejs`);
 app.get(`/`, (req, res) => {
-  res.send("Hallosssas");
+  res.render("index");
 });
 
 //internal server
