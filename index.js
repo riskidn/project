@@ -49,9 +49,9 @@ app.get(`/hat`, (req, res) => {
   res.render("pages/topi");
 });
 
-//contoh error internal server
-app.get(`/contohError`, (req, res) => {
-  contohError;
+//Error internal server 500
+app.get(`/serverError`, (req, res) => {
+  serverError;
 });
 app.use(function (err, req, res, next) {
   res.status(500).json({
