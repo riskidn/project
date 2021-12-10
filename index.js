@@ -29,7 +29,27 @@ app.get(`/signup`, (req, res) => {
   res.render("pages/signup");
 });
 
-//internal server
+//Content
+app.get(`/shoes`, (req, res) => {
+  res.render("pages/sepatu");
+});
+app.get(`/arloji`, (req, res) => {
+  res.render("pages/arloji");
+});
+app.get(`/jacket`, (req, res) => {
+  res.render("pages/jaket");
+});
+app.get(`/necklace`, (req, res) => {
+  res.render("pages/kalung");
+});
+app.get(`/glasses`, (req, res) => {
+  res.render("pages/glasses");
+});
+app.get(`/hat`, (req, res) => {
+  res.render("pages/topi");
+});
+
+//contoh error internal server
 app.get(`/contohError`, (req, res) => {
   contohError;
 });
@@ -41,9 +61,11 @@ app.use(function (err, req, res, next) {
 
 //404 handler
 app.use(function (req, res, next) {
-  res.status(404).json({
-    errors: `You Typed Wrong`,
+  res.writeHead(404, {
+    "Content-Type": "text/html",
   });
+  res.write("<h1>You Typed it Wrong </h1>");
+  res.end;
 });
 
 app.listen(8000, () => {
